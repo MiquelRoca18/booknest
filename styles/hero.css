@@ -1,0 +1,29 @@
+main {
+    .hero {
+        color: var(--dark-color);
+        display: flex;
+        justify-content: space-between;
+
+        div {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            .line {
+                display: block;  
+            }
+            h1{
+                font-size: var(--font-size-xl);
+            }
+            h2{
+                font-size: var(--font-size-md);
+                font-weight: lighter;
+            }
+        }
+        
+        img{
+            width: 400px;
+            border-radius: 20px;
+        }
+    }
+}

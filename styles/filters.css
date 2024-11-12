@@ -1,0 +1,40 @@
+main {
+    .filters {
+        padding-top: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1.2rem;
+        .searchInput {
+            display: flex;
+            justify-content: center;
+            height: 2.5rem;
+            width: 12rem;
+            background: var(--lessLight-color);
+            gap: 8px;
+            border-radius: 15px;
+            .icon {
+                width: 1.5rem;
+            }
+            input {
+                background: transparent;
+                border: none;
+                outline: none;
+                border-radius: 10px;
+                
+                &::placeholder {
+                    font-family: var(--font-main);
+                    font-size: var(--font-size-lg);
+                    color: var(--lessDark-color);
+                    font-weight: lighter;
+                }
+            }
+        }
+
+        .filtersInputs{
+
+        }
+    }
+    
+}

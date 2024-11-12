@@ -18,7 +18,7 @@
     --font-size-sm: 0.875rem; 
     --font-size-md: 1rem;     
     --font-size-lg: 1.25rem;
-    --font-size-xl: 2rem;     
+    --font-size-xl: 3rem;     
 
     /* Sombreado y Border */
     --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -35,4 +35,7 @@
     /* Altura de línea y espaciado entre letras */
     --line-height-base: 1.5;
     --letter-spacing-base: 0.02em;
+
+    /* Tamaño SVGs*/
+    --size-icon: 2.3rem;
 }

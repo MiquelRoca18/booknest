@@ -1,0 +1,15 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    div {
+        display: flex;
+        justify-content: center;
+    }
+    .image {
+        width: 125px;
+    }
+    .divIcons {
+        gap: var(--spacing-sm);
+    }
+}
