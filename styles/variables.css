@@ -1,0 +1,38 @@
+:root {
+    /* Colores */
+    --dark-color: #542700;
+    --light-color: #F8E2B1;
+    --lessDark-color: #763A18;
+    --lessLight-color: #DAB061;
+
+    /* Espaciado */
+    --spacing-xs: 0.5rem;  
+    --spacing-sm: 1rem;    
+    --spacing-md: 1.5rem;  
+    --spacing-lg: 2rem;    
+    --spacing-xl: 3rem;    
+
+    /* Textos */
+    --font-main: 'Crimson Pro', sans-serif;
+    --font-size-base: 16px;
+    --font-size-sm: 0.875rem; 
+    --font-size-md: 1rem;     
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 2rem;     
+
+    /* Sombreado y Border */
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --border-radius: 5px;
+
+    /* Anchos Máximos Contenedores */
+    --max-width-container: 1200px;
+    --max-width-section: 960px;
+
+    /* Transiciones y Animaciones */
+    --transition-speed: 0.3s;
+    --transition-ease: ease-in-out;
+
+    /* Altura de línea y espaciado entre letras */
+    --line-height-base: 1.5;
+    --letter-spacing-base: 0.02em;
+}
