@@ -20,7 +20,7 @@ html, body{
 
 main, footer, header {
     width: 80%;
-    max-width: 1900px;
+    /*max-width: 1900px;*/
     margin: 0 auto;
     padding-top: var(--spacing-md);
 }
