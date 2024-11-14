@@ -2,8 +2,15 @@
     /* Colores */
     --dark-color: #542700;
     --light-color: #F8E2B1;
-    --lessDark-color: #763A18;
+    --lessDark-color: #763A18;   
     --lessLight-color: #DAB061;
+    --lessLight-transition-color: #be964a;
+
+    /* Filtros para cambiar colores Iconos*/
+    --dark-filter: invert(15%) sepia(41%) saturate(2361%) hue-rotate(9deg) brightness(97%) contrast(101%);
+    --light-filter: invert(83%) sepia(17%) saturate(468%) hue-rotate(3deg) brightness(102%) contrast(103%);
+    --lessDark-filter: invert(22%) sepia(19%) saturate(3955%) hue-rotate(352deg) brightness(92%) contrast(86%);
+    --lessLight-filter: invert(76%) sepia(40%) saturate(529%) hue-rotate(354deg) brightness(90%) contrast(88%);
 
     /* Espaciado */
     --spacing-xs: 0.5rem;  

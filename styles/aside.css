@@ -1,0 +1,29 @@
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: fixed;
+    bottom: 20px;  
+    left: 880px;   
+    z-index: 999;  
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2.4rem;
+        height: 2.4rem;
+        border-radius: 90px;
+        cursor: pointer;
+        background: var(--lessLight-color);
+        transition: background var(--transition-speed) var(--transition-ease);
+        .icon{
+            width: 1.7rem;
+        }
+    }
+    div:hover {
+        background: var(--dark-color);
+        .icon{
+            filter: var(--light-filter);
+        }
+    }
+}

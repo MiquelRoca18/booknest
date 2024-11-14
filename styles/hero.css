@@ -9,9 +9,6 @@ main {
             justify-content: center;
             flex-direction: column;
             gap: 10px;
-            .line {
-                display: block;  
-            }
             h1{
                 font-size: var(--font-size-xl);
             }

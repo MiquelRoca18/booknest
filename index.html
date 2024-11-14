@@ -19,7 +19,13 @@
         </div>
     </header>
     <aside>
-
+        <div>
+            <img src="assets/svg/icon-darkMode.svg" alt="Modo Oscuro" class="icon">
+            <img src="assets/svg/icon-lightMode.svg" alt="Modo Claro" hidden class="icon">
+        </div>
+        <div>
+            <img src="assets/svg/icon-arrow.svg" alt="Flecha" class="icon">
+        </div>
     </aside>
     <main>
         <section class="hero">
@@ -34,35 +40,49 @@
                 <img src="assets/svg/icon-search.svg" alt="Buscar" class="icon">
                 <input type="search" placeholder="Buscar...">
             </div> 
+            <!-- Más tarde haremos de otra manera para estilarlo mejor el dropdown de los filtros -->
             <div class="filtersInputs">
-                <select name="" id="">
-    
+                <select name="clasificar" id="clasificar">
+                    <option value="recomendado">Recomendado</option>
+                    <option value="mayoramenor">Precio de mayor a menor</option>
+                    <option value="menoramayor">Precio menor a mayor</option>
                 </select>
-                <select name="" id="">
-                    
+                <select name="categoria" id="categoria">
+                    <option value="todos">Todos</option>
                 </select>
-                <select name="" id="">
-                    
+                <select name="valoracion" id="valoracion">
+                    <option value="todos">Todos</option>
                 </select>
-                <select name="" id="">
-                    
+                <select name="formato" id="formato">
+                    <option value="todos">Todos</option>
                 </select>
-                <select name="" id="">
-                    
-                </select>
-                <select name="" id="">
-                    
+                <select name="precio" id="precio">
+                    <option value="todos">Todos</option>
                 </select>
             </div>          
         </section>
         <section class="listBooks">
-
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
             <nav class="pagination"></nav>
         </section>
     </main>
     <footer>
-        <div><p></p></div>
-        <div><p></p></div>
+        <div><p>
+                <span class="line">© 2025 <a href="https://porfoliomiquelroca.netlify.app/">Miquel Roca</a>.</span>
+                <span class="line">Todos los derechos reservados.</span>
+        </p></div>
+        <div>
+            <p><a href="">Contact</a></p>
+            <a target="_blank" href="https://github.com/MiquelRoca18"><img src="assets/svg/icon-github.svg" alt="Github Miquel Roca" class="icon"></a>
+        </div>
     </footer>
 </body>
 </html>

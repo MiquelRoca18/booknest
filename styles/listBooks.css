@@ -1,0 +1,18 @@
+.listBooks {
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    div {
+        width: 15rem;
+        height: 20rem;
+        background: var(--lessLight-color);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        transition: background var(--transition-speed) var(--transition-ease);
+    }
+    div:hover {
+        background: var(--lessLight-transition-color);
+    }
+}

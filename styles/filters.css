@@ -32,8 +32,22 @@ main {
             }
         }
 
+        /* Más tarde haremos de otra manera el dropdown para estilarlo mejor de los filtros */
         .filtersInputs{
-
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            
+            select {
+                border: none;
+                background: var(--lessLight-color);
+                outline: none;
+                padding: 7px;
+                border-radius: 10px;
+                color: var(--lessDark-color);
+                font-weight: bold;
+            }
+            
         }
     }
     
