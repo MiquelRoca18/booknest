@@ -1,6 +1,6 @@
-
+import { apiKey } from '../config'
 const API_URL = "https://www.googleapis.com/books/v1/volumes";
-const API_KEY = 'AIzaSyCkAO8dY-cA4wN2Ph8G-nl8f7SEUyge3DY'; // Más tarde se cambiará paramayor seguridad
+const API_KEY = apiKey; // Más tarde se cambiará paramayor seguridad
 
 
 /**

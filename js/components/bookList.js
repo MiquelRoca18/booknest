@@ -1,9 +1,8 @@
 import { fetchBooks } from "../services/apiService.js"
 
 const $ = el => document.querySelector(el)
-const $$ = el => document.querySelectorAll(el)
 
-// Mostrar datos
+// Mostrar datos Google API
 export function renderBooks(books) {
     const template = $('#book-template')
     const container = $('.listBooks')
