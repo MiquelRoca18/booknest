@@ -16,6 +16,7 @@ html, body{
     width: var(--size-icon);
     filter: var(--dark-filter);
     transition: filter var(--transition-speed) var(--transition-ease);
+    cursor: pointer;
 }
 
 main, footer, header {

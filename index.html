@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BookNest. Tu Biblioteca Favorita</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/logoBooknestLight.png">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
     <header>
         <div class="divLogo">
-            <img src="assets/img/logoBooknestDark1.png" alt="Logo Booknest" class="image">
+            <img src="assets/img/logoBooknestDark.png" alt="Logo Booknest" class="image">
             <img src="assets/img/logoBooknestLight.png" alt="Logo Booknest" hidden class="image">
         </div>
         <div class="divIcons">
@@ -62,15 +63,15 @@
             </div>          
         </section>
         <section class="listBooks">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <template id="book-template">
+                <div class="book-item">
+                    <img src="" alt="" class="book-image">
+                    <h3 class="book-title"></h3>
+                    <p class="book-author"></p>
+                    <p class="book-price"></p>
+                    <p class="book-rate"></p>
+                </div>
+            </template>
             <nav class="pagination"></nav>
         </section>
     </main>
@@ -84,5 +85,6 @@
             <a target="_blank" href="https://github.com/MiquelRoca18"><img src="assets/svg/icon-github.svg" alt="Github Miquel Roca" class="icon"></a>
         </div>
     </footer>
+    <script type="module" src="./js/main.js"></script>
 </body>
 </html>
