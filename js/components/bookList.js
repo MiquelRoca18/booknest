@@ -2,26 +2,51 @@ import { fetchBooks } from "../services/apiService.js"
 
 const $ = el => document.querySelector(el)
 
+function formatBookData(book) {
+    return {
+        title: book.volumeInfo?.title || 'Título no disponible',
+        author: truncateText(book.volumeInfo?.authors?.join(', ')) || 'Autor desconocido',
+        image: book.volumeInfo?.imageLinks?.thumbnail || 'default-image.jpg',
+        price: book.saleInfo?.listPrice?.amount ? `$${book.saleInfo.listPrice.amount}` : 'Precio no disponible',
+        rating: book.volumeInfo?.averageRating ? `${book.volumeInfo.averageRating}` : 'Sin calificación'
+    };
+}
+
 // Mostrar datos Google API
 export function renderBooks(books) {
     const template = $('#book-template')
     const container = $('.listBooks')
-    const nav = container.querySelector('.pagination'); // También debes agregar el punto para clases
-
+    const nav = container.querySelector('.pagination'); 
     const fragment = document.createDocumentFragment();
 
     books.forEach(book => {
+        const formattedBook = formatBookData(book);
         const clone = template.content.cloneNode(true);
 
-        clone.querySelector('.book-image').src = book.volumeInfo?.imageLinks?.thumbnail || 'default-image.jpg';
-        clone.querySelector('.book-title').textContent = book.volumeInfo?.title || 'No Title';
-        clone.querySelector('.book-author').textContent = book.volumeInfo?.authors?.join(', ') || 'Unknown Author';
-        clone.querySelector('.book-price').textContent = book.saleInfo?.listPrice?.amount ? `$${book.saleInfo.listPrice.amount}` : 'Price not available';
-        clone.querySelector('.book-rate').textContent = book.volumeInfo?.averageRating ? `Rating: ${book.volumeInfo.averageRating}` : 'No rating';
+        clone.querySelector('.book-image').src = formattedBook.image;
+        clone.querySelector('.book-title').textContent = formattedBook.title;
+        clone.querySelector('.book-author').textContent = formattedBook.author;
+        clone.querySelector('.book-price').textContent = formattedBook.price;
+        //Cantidad de estrellas segun rating
+        const starTotal = 5;
+        const starPercentage = (Number(formattedBook.rating) / starTotal) * 100;
+        const starPercentageRounded = `${(Math.round(starPercentage / 10) * 10)}%`;
+        clone.querySelector(`.stars-inner`).style.width = starPercentageRounded; 
 
         fragment.appendChild(clone)
     })
 
+    
     // Insertar el fragmento *antes* del elemento <nav class="pagination">
     container.insertBefore(fragment, nav); // Esto lo coloca antes de 'nav'
+}
+
+function truncateText(text) {
+    if (text && text.includes(".") &&  text.length > 20) {
+        text = text.substr(0, text.indexOf('.'))
+    }
+    if (text && text.includes(",") &&  text.length > 20) {
+        text = text.substr(0, text.indexOf(','))
+    }
+    return text; 
 }

@@ -1,5 +1,5 @@
-import { apiKey } from '../config'
-const API_URL = "https://www.googleapis.com/books/v1/volumes";
+import { apiKey, apiUrl } from '../config.js'
+const API_URL = apiUrl;
 const API_KEY = apiKey; // Más tarde se cambiará paramayor seguridad
 
 

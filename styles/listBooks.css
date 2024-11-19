@@ -1,18 +1,66 @@
 .listBooks {
     width: 100%;
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
     gap: 8px;
-    div {
-        width: 15rem;
-        height: 20rem;
-        background: var(--lessLight-color);
+    .book-item {
+        color: var(--dark-color);
+        padding: 10px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 4px;
+        background: var(--card-color);
         border-radius: var(--border-radius);
         box-shadow: var(--box-shadow);
         transition: background var(--transition-speed) var(--transition-ease);
+        img {
+            width: 150px; 
+            height: 200px; 
+        }
+        h3 {
+            font-size: var(--font-size-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            height: 40px;
+        }
+        h4{
+            font-size: var(--font-size-md);
+            opacity: 0.8;
+        }
+        p{
+            opacity: 0.7;
+            font-size: var(--font-size-sm);
+        }
+        
+        .stars-outer {
+            display: inline-block;
+            position: relative;
+            font-family: FontAwesome;
+        }
+        .stars-outer::before {
+            content: "\f006 \f006 \f006 \f006 \f006";
+        }
+        .stars-inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+        }
+        .stars-inner::before {
+            content: "\f005 \f005 \f005 \f005 \f005";
+            color: #f8ce0b;
+        } 
     }
     div:hover {
-        background: var(--lessLight-transition-color);
+        background: var(--lessLight-color);
     }
 }
