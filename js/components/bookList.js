@@ -1,11 +1,10 @@
-import { fetchBooks } from "../services/apiService.js"
 
 const $ = el => document.querySelector(el)
 
 function formatBookData(book) {
     return {
         title: book.volumeInfo?.title || 'Título no disponible',
-        author: truncateText(book.volumeInfo?.authors?.join(', ')) || 'Autor desconocido',
+        author:  truncateText(Array.isArray(book.volumeInfo?.authors) ? book.volumeInfo.authors[0] : 'Autor desconocido'),
         image: book.volumeInfo?.imageLinks?.thumbnail || 'default-image.jpg',
         price: book.saleInfo?.listPrice?.amount ? `$${book.saleInfo.listPrice.amount}` : 'Precio no disponible',
         rating: book.volumeInfo?.averageRating ? `${book.volumeInfo.averageRating}` : 'Sin calificación'

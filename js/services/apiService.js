@@ -15,15 +15,26 @@ export async function fetchBooks(query, filters = [], maxResults = 6, startIndex
     try {
         let allBooks = [];
         
-        // Realiza una llamada a la API para cada filtro
-        for (const filter of filters) {
-            const response = await fetch(`${API_URL}?q=${query}&filter=${filter}&maxResults=${maxResults}&startIndex=${startIndex}&key=${API_KEY}`);
+        if (filters.length === 0) {
+            // Si no hay filtros, haz una única solicitud con solo la query
+            const response = await fetch(`${API_URL}?q=${query}&maxResults=${maxResults}&startIndex=${startIndex}&key=${API_KEY}`);
             if (!response.ok) {
                 throw new Error(`Error: ${response.status} - ${response.statusText}`);
             }
-            
+
             const data = await response.json();
-            allBooks = [...allBooks, ...data.items]; // Combina los resultados
+            allBooks = data.items || []; // Asegúrate de que no sea null si no hay resultados
+        } else {
+            // Realiza una llamada a la API para cada filtro
+            for (const filter of filters) {
+                const response = await fetch(`${API_URL}?q=${query}&filter=${filter}&maxResults=${maxResults}&startIndex=${startIndex}&key=${API_KEY}`);
+                if (!response.ok) {
+                    throw new Error(`Error: ${response.status} - ${response.statusText}`);
+                }
+
+                const data = await response.json();
+                allBooks = [...allBooks, ...(data.items || [])]; // Combina los resultados
+            }
         }
         
         return allBooks;  // Devuelve los libros combinados de todos los filtros

@@ -40,26 +40,31 @@
         <section class="filters">
             <div class="searchInput">
                 <img src="assets/svg/icon-search.svg" alt="Buscar" class="icon">
-                <input type="search" placeholder="Buscar...">
+                <input id="inputSearch" type="search" placeholder="Buscar..." value="Harry Potter">
             </div> 
             <!-- Más tarde haremos de otra manera para estilarlo mejor el dropdown de los filtros -->
             <div class="filtersInputs">
-                <select name="clasificar" id="clasificar">
-                    <option value="recomendado">Recomendado</option>
-                    <option value="mayoramenor">Precio de mayor a menor</option>
-                    <option value="menoramayor">Precio menor a mayor</option>
+                <select name="classify" id="classify">
+                    <option value="recommended">Recomendado</option>
+                    <option value="highesttolowest">Precio de mayor a menor</option>
+                    <option value="lowesttohighest">Precio menor a mayor</option>
                 </select>
-                <select name="categoria" id="categoria">
-                    <option value="todos">Todos</option>
+                <select name="category" id="category">
+                    <option value="all">Todas las categorías</option>
                 </select>
-                <select name="valoracion" id="valoracion">
-                    <option value="todos">Todos</option>
+                <select name="rate" id="rate">
+                    <option value="all">Todas las valoraciones</option>
+                    <option value="5">★★★★★</option>
+                    <option value="4">★★★★☆</option>
+                    <option value="3">★★★☆☆</option>
+                    <option value="2">★★☆☆☆</option>
+                    <option value="1">★☆☆☆☆</option>
                 </select>
-                <select name="formato" id="formato">
-                    <option value="todos">Todos</option>
+                <select name="format" id="format">
+                    <option value="all">Todos los formatos</option>
                 </select>
-                <select name="precio" id="precio">
-                    <option value="todos">Todos</option>
+                <select name="price" id="price">
+                    <option value="all">Todos los precios</option>
                 </select>
             </div>          
         </section>

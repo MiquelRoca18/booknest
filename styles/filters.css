@@ -34,10 +34,12 @@ main {
 
         /* Más tarde haremos de otra manera el dropdown para estilarlo mejor de los filtros */
         .filtersInputs{
-            width: 100%;
+            width: 80%;
             display: flex;
-            justify-content: space-between;
-            
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
             select {
                 border: none;
                 background: var(--lessLight-color);
@@ -49,6 +51,7 @@ main {
             }
             
         }
+        
     }
     
 }
