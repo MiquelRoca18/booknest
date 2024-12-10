@@ -4,7 +4,7 @@ aside {
     gap: 10px;
     position: fixed;
     bottom: 20px;  
-    left: 880px;   
+    left: 1800px;   
     z-index: 999;  
     div {
         display: flex;

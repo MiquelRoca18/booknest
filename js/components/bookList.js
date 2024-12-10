@@ -7,7 +7,8 @@ function formatBookData(book) {
         author:  truncateText(Array.isArray(book.volumeInfo?.authors) ? book.volumeInfo.authors[0] : 'Autor desconocido'),
         image: book.volumeInfo?.imageLinks?.thumbnail || 'default-image.jpg',
         price: book.saleInfo?.listPrice?.amount ? `$${book.saleInfo.listPrice.amount}` : 'Precio no disponible',
-        rating: book.volumeInfo?.averageRating ? `${book.volumeInfo.averageRating}` : 'Sin calificación'
+        rating: book.volumeInfo?.averageRating ? `${book.volumeInfo.averageRating}` : 'Sin calificación',
+        link: book.volumeInfo?.infoLink ? `${book.volumeInfo?.infoLink}` : 'No disponible'
     };
 }
 
@@ -26,6 +27,11 @@ export function renderBooks(books) {
         clone.querySelector('.book-title').textContent = formattedBook.title;
         clone.querySelector('.book-author').textContent = formattedBook.author;
         clone.querySelector('.book-price').textContent = formattedBook.price;
+        if(formattedBook.link != 'No disponible'){
+            clone.querySelector('.link-purchase').href = formattedBook.link;
+        }else {
+            clone.querySelector('.button-google').remove;
+        }
         //Cantidad de estrellas segun rating
         const starTotal = 5;
         const starPercentage = (Number(formattedBook.rating) / starTotal) * 100;

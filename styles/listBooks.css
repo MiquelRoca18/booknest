@@ -11,12 +11,12 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 4px;
+        gap: 7px;
         background: var(--card-color);
         border-radius: var(--border-radius);
         box-shadow: var(--box-shadow);
         transition: background var(--transition-speed) var(--transition-ease);
-        img {
+        .book-image {
             width: 150px; 
             height: 200px; 
         }
@@ -58,6 +58,31 @@
             content: "\f005 \f005 \f005 \f005 \f005";
             color: #f8ce0b;
         } 
+        .button-google{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            border-radius: 20px;
+            background: var(--lessDark-color);
+            width: 150px;
+            height: 45px;
+            transition: background var(--transition-speed) var(--transition-ease);
+            .icon {
+                width: 1.5rem;
+                filter: var(--light-filter);
+            }
+            span {
+                color: var(--light-color);
+                font-size: var(--font-size-lg);
+            }
+        }
+        .button-google:hover {
+            background: var(--dark-color);
+            .icon{
+                filter: var(--light-filter);
+            }
+        }
     }
     div:hover {
         background: var(--lessLight-color);

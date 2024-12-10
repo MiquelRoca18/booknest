@@ -2,7 +2,7 @@ main {
     .hero {
         color: var(--dark-color);
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
 
         div {
             display: flex;
@@ -10,16 +10,16 @@ main {
             flex-direction: column;
             gap: 10px;
             h1{
-                font-size: var(--font-size-xl);
+                font-size: var(--font-size-xxl);
             }
             h2{
-                font-size: var(--font-size-md);
+                font-size: var(--font-size-xl);
                 font-weight: lighter;
             }
         }
         
         img{
-            width: 400px;
+            width: 600px;
             border-radius: 20px;
         }
     }
